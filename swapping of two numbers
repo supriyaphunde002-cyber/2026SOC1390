@@ -10,4 +10,5 @@ int main()
   b=c;
   cout<<"a:"<<a<<endl;
   cout<<"b:"<<b<<endl;
+  return o;
 }
