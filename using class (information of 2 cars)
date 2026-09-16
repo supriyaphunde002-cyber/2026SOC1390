@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Car{
+  public:
+  string brand;
+  string model;
+  string colour;
+  float max_speed;
+};
+int main()
+{
+  Car c1;
+  c1.brand="toyota";
+  c1.model="Innova";
+  c1.colour="Black";
+  c1.Max_speed=180;
+  cout<<c1.brand<<c1.colour<<c1.max_speed<<c1.model;
+  return 0;
+}
