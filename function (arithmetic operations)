@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+void Add();
+{
+  int num1,num2,sum;
+  cout<<"enter the value of num1, num2:";
+  cin>>num1>>num2;
+  sum=num1+num2;
+  cout<<"Addition:"<<sum;
+}
+void Sub();
+{
+  int num1,num2,sub;
+  cout<<"enter the value of num1, num2:";
+  cin>>num1>>num2;
+  sub=num1-num2;
+  cout<<"Substraction:"<<sub;
+}
+void mul();
+{
+  int num1,num2,mul;
+  cout<<"enter the value of num1, num2:";
+  cin>>num1>>num2;
+  mul=num1*num2;
+  cout<<"Multiplication:"<<mul;
+}
+void div();
+{
+  int num1,num2,div;
+  cout<<"enter the value of num1, num2:";
+  cin>>num1>>num2;
+  div=num1/num2;
+  cout<<"Division:"<<div;
+}
+int main()
+{
+  Add();
+  sub();
+  mul();
+  div();
+  return 0;
+}
