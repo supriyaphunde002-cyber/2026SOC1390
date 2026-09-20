@@ -1,0 +1,51 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Student
+{
+  public:
+  int rollno;
+  string name;
+  int P,C,M;
+
+  void Getinfo()
+  {
+    cout<<"enter roll no:"<<endl;
+    cin>>rollno;
+    cout<<"enter name:"<<endl;
+    cin>>name;
+    cout<<"enter Physics marks:"<<endl;
+    cin>>P;
+    cout<<"enter Chemistry marks:"<<endl;
+    cin>>C;
+    cout<<"enter Maths marks:"<<endl;
+    cin>>M;
+  }
+
+  void Displayinfo()
+  {
+    cout<<"Roll No:"<<rollno<<endl;
+    cout<<"Name:"<<name<<endl;
+    cout<<"Physics Marks:"<<P<<endl;
+    cout<<"Chemistry Marks:"<<C<<endl;
+    cout<<"Maths Marks:"<<M<<endl;
+  }
+
+  void Result()
+  {
+    float percentage;
+    percentage=(P+C+M)/100;
+    cout<<"Total Percentage:"<<percentage;
+  }
+};
+int main()
+{
+  Student S1,S2;
+  S1.Getinfo();
+  S1.Displayinfo();
+  S1.Result();
+  S2.Getinfo();
+  S2.Displayinfo();
+  S2.Result();
+  return 0;
+}
