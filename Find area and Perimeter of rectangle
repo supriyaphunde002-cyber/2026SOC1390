@@ -1,0 +1,31 @@
+#include<iostream>
+using namespacce std;
+class Rectangle
+{
+  private:
+  int L,B;
+
+  public:
+  void Getinfo()
+  {
+    cout<<"Enter Length:"<<endl;
+    cin>>L;
+    cout<<"Enter Breadth:"<<endl;
+    cin>>B
+  }
+
+  void Calculate()
+  {
+    cout<<"Area:"<<L*B<<endl;
+    cout<<"Perimeter"<<2*(L+B);
+  }
+};
+
+int main()
+{
+  Rectangle R1,R2;
+  R1.Getinfo();
+  R1.Calculate();
+  R2.Getinfo();
+  R2.Calculate();
+}
