@@ -1,0 +1,69 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Product
+{
+  public:
+  int product_id;
+  string product_name;
+  float price;
+  int monthly_sales[12];
+
+  void Getinfo()
+  {
+    cout<<"Enter the product ID:"<<endl;
+    cin>>product_id;
+    cout<<"Enter the product name:"<<endl;
+    cin>>product_name;
+    cout<<"Enter the product price:"<<endl;
+    cin>>price;
+
+    for(int i=0;i<12;i++)
+      {
+        cout<<"Enter sales for month"<<i+1<<":"<<endl;
+        cin>>monthly_sales[i]
+      }
+  }
+
+  int total_quantity()
+  {
+    int total=0;
+    for(int i=0;i<12;i++)
+      {
+        total=total+monthlysales[i];
+      }
+    return total;
+  }
+
+  float Bill()
+  {
+    return total_quantity()*price;
+  }
+
+  void Displayinfo()
+  { 
+    cout<<"Product ID:"<<product_id<<endl;
+    cout<<"Product Name:"<<product_name<<endl;
+    cout<<"Product Price:"<<price<<endl;
+    cout<<"Total quantity of monthly sales:"<<total_quantity();
+    cout<<"Total Bill:"<<Bill();
+  }
+};
+int main()
+{
+  int a;
+  cout<<"Enter the number of products:"<<endl;
+  cin>>a
+    
+  Product P[a];
+  for(int i=0,i<12,i++)
+    {
+      P[i].Getinfo();
+    }
+  
+  for(int i=0,i<12,i++)
+    {
+      P[i].Displayinfo();
+    }
+    return 0;
+}
