@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+class B;  
+
+class A {
+private:
+    int x;
+    static int count;
+
+public:
+    A(int a) {
+        x = a;
+        count++;
+    }
+    static void displayCount() 
+    {
+        cout << "Number of objects of class A: "
+             << count << endl;
+    }
+
+   
+    friend void compare(A, A);
+    friend void compareClasses(A, B);
+};
+
+int A::count = 0;
+
+class B {
+private:
+    int y;
+
+public:
+    B(int b) {
+        y = b;
+    }
+
+    friend void compareClasses(A, B);
+};
+
+
+void compare(A a1, A a2) {
+    if (a1.x > a2.x)
+        cout << "First object has greater value." << endl;
+    else if (a1.x < a2.x)
+        cout << "Second object has greater value." << endl;
+    else
+        cout << "Both objects have equal values." << endl;
+}
+
+
+void compareClasses(A a, B b) {
+    if (a.x > b.y)
+        cout << "Class A has greater value." << endl;
+    else if (a.x < b.y)
+        cout << "Class B has greater value." << endl;
+    else
+        cout << "Both classes have equal values." << endl;
+}
+
+int main() {
+    A a1(50), a2(30);
+    B b1(40);
+
+    A::displayCount();
+
+    compare(a1, a2);
+    compareClasses(a1, b1);
+
+    return 0;
+}
